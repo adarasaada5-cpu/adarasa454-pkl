@@ -1,0 +1,6 @@
+{
+  "name": "APP PKL",
+  "description": "Sistem Informasi & Aplikasi Administrasi Praktik Kerja Lapangan (PKL) SMK",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

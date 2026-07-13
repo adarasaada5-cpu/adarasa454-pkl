@@ -1,0 +1,266 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F8F9FC;
+  color: #1E293B;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Material Icons Helper */
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* 2026 Slate Dark Theme Overrides */
+.dark, .dark body, .dark #app-dashboard-layout {
+  background-color: #0B0F19 !important;
+  color: #F1F5F9 !important;
+}
+
+.dark .bg-white {
+  background-color: #111827 !important;
+  color: #F1F5F9 !important;
+}
+
+.dark header {
+  background-color: #111827 !important;
+  border-color: #1F2937 !important;
+}
+
+.dark aside {
+  background-color: #111827 !important;
+  border-color: #1F2937 !important;
+}
+
+.dark aside .bg-white {
+  background-color: #111827 !important;
+}
+
+.dark aside .border-gray-100 {
+  border-color: #1F2937 !important;
+}
+
+.dark aside .bg-gray-50\/50 {
+  background-color: #1F2937\/40 !important;
+}
+
+.dark .text-gray-900 {
+  color: #F9FAFB !important;
+}
+
+.dark .text-gray-800 {
+  color: #F3F4F6 !important;
+}
+
+.dark .text-gray-700 {
+  color: #E5E7EB !important;
+}
+
+.dark .text-gray-600 {
+  color: #D1D5DB !important;
+}
+
+.dark .text-gray-500 {
+  color: #9CA3AF !important;
+}
+
+.dark .text-gray-400 {
+  color: #9CA3AF !important;
+}
+
+.dark .border-gray-200 {
+  border-color: #1F2937 !important;
+}
+
+.dark .border-gray-200\/80 {
+  border-color: #1F2937 !important;
+}
+
+.dark .border-gray-100 {
+  border-color: #1F2937 !important;
+}
+
+.dark .bg-gray-50 {
+  background-color: #1F2937 !important;
+}
+
+.dark .bg-gray-50\/50 {
+  background-color: #1F2937\/40 !important;
+}
+
+.dark .bg-gray-100 {
+  background-color: #1F2937 !important;
+}
+
+.dark .bg-gray-100\/80 {
+  background-color: #1F2937\/80 !important;
+}
+
+.dark .bg-gray-200 {
+  background-color: #374151 !important;
+}
+
+.dark .hover\:bg-gray-50:hover {
+  background-color: #1F2937 !important;
+}
+
+.dark .hover\:bg-gray-100:hover {
+  background-color: #374151 !important;
+}
+
+.dark .bg-blue-50 {
+  background-color: rgba(21, 101, 192, 0.15) !important;
+}
+
+.dark .text-blue-600 {
+  color: #60A5FA !important;
+}
+
+.dark .text-emerald-600 {
+  color: #34D399 !important;
+}
+
+.dark .bg-emerald-50 {
+  background-color: rgba(46, 125, 50, 0.15) !important;
+}
+
+.dark .text-amber-600 {
+  color: #FBBF24 !important;
+}
+
+.dark .bg-amber-50 {
+  background-color: rgba(217, 119, 6, 0.15) !important;
+}
+
+/* Ensure high contrast dark blue/black text on white/light backgrounds in light mode */
+input, textarea, select {
+  color: #0F172A !important; /* Deep dark blue-black for perfect contrast */
+}
+
+/* Fix option element text colors inside select menus */
+select option {
+  color: #0F172A !important;
+  background-color: #FFFFFF !important;
+}
+
+/* Placeholder contrast styling */
+input::placeholder, textarea::placeholder {
+  color: #64748B !important; /* Clear, legible slate gray */
+}
+
+.dark input, .dark textarea, .dark select {
+  background-color: #1F2937 !important;
+  color: #F9FAFB !important;
+  border-color: #374151 !important;
+}
+
+.dark select option {
+  background-color: #1F2937 !important;
+  color: #F9FAFB !important;
+}
+
+.dark input:focus, .dark textarea:focus, .dark select:focus {
+  border-color: #60A5FA !important;
+  outline: none;
+}
+
+.dark .shadow-sm {
+  shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5) !important;
+}
+
+.dark .shadow-md {
+  shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5) !important;
+}
+
+.dark .MuiPaper-root {
+  background-color: #111827 !important;
+  color: #F1F5F9 !important;
+  border: 1px solid #1F2937 !important;
+}
+
+.dark .MuiMenuItem-root {
+  color: #F1F5F9 !important;
+}
+
+.dark .MuiMenuItem-root:hover {
+  background-color: #1F2937 !important;
+}
+
+/* Print CSS Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  body, html, #root, #app-dashboard-layout {
+    background: white !important;
+    background-color: white !important;
+    color: black !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+  /* Force black text and high contrast borders during print */
+  * {
+    color: #000000 !important;
+    border-color: #94A3B8 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  @page {
+    size: A4;
+    margin: 1.5cm;
+  }
+}
+.print-only {
+  display: none;
+}
+

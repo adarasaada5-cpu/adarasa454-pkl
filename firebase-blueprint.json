@@ -1,0 +1,98 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile with role details",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "role": { "type": "string", "enum": ["siswa", "pembimbing", "admin"] },
+        "photoURL": { "type": "string" },
+        "nisn": { "type": "string" },
+        "kelas": { "type": "string" },
+        "tempatPkl": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "name", "email", "role", "createdAt"]
+    },
+    "JurnalEntry": {
+      "title": "JurnalEntry",
+      "description": "Daily student internship journal",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "userName": { "type": "string" },
+        "tanggal": { "type": "string" },
+        "kegiatan": { "type": "string" },
+        "kendala": { "type": "string" },
+        "solusi": { "type": "string" },
+        "status": { "type": "string", "enum": ["pending", "approved", "rejected"] },
+        "pembimbingComment": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "userId", "userName", "tanggal", "kegiatan", "status", "createdAt"]
+    },
+    "KehadiranEntry": {
+      "title": "KehadiranEntry",
+      "description": "Student daily attendance log",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "userName": { "type": "string" },
+        "tanggal": { "type": "string" },
+        "jamMasuk": { "type": "string" },
+        "jamPulang": { "type": "string" },
+        "status": { "type": "string", "enum": ["hadir", "sakit", "izin", "alpa"] },
+        "keterangan": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "userId", "userName", "tanggal", "jamMasuk", "status", "createdAt"]
+    },
+    "TeacherNote": {
+      "title": "TeacherNote",
+      "description": "Supervisor development logs for students during internship",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "studentId": { "type": "string" },
+        "studentName": { "type": "string" },
+        "studentClass": { "type": "string" },
+        "teacherId": { "type": "string" },
+        "teacherName": { "type": "string" },
+        "title": { "type": "string" },
+        "category": { "type": "string", "enum": ["Monitoring", "Prestasi", "Pelanggaran", "Konseling", "Lainnya"] },
+        "status": { "type": "string", "enum": ["Sangat Baik", "Baik", "Cukup", "Perlu Pembinaan", "Kritis"] },
+        "content": { "type": "string" },
+        "attachmentUrl": { "type": "string" },
+        "attachmentName": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" },
+        "createdBy": { "type": "string" },
+        "isDeleted": { "type": "boolean" }
+      },
+      "required": ["id", "studentId", "studentName", "studentClass", "teacherId", "teacherName", "title", "category", "status", "content", "createdAt", "updatedAt", "createdBy", "isDeleted"]
+    }
+  },
+  "firestore": {
+    "profiles": {
+      "schema": "UserProfile",
+      "description": "User profiles of students and teachers"
+    },
+    "journals": {
+      "schema": "JurnalEntry",
+      "description": "Daily journals submitted by students"
+    },
+    "attendance": {
+      "schema": "KehadiranEntry",
+      "description": "Attendance history of clock-ins"
+    },
+    "teacher_notes": {
+      "schema": "TeacherNote",
+      "description": "Supervisor evaluation logs and notes on students"
+    }
+  }
+}
