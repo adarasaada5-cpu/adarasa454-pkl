@@ -1,4 +1,4 @@
-import { db, auth, isFirebaseActive as originalIsFirebaseActive } from "../firebase/config";
+import { db, auth, isFirebaseActive as originalIsFirebaseActive } from "../firebase/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 
 let isFirestoreBroken = false;
